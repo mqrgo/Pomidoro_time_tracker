@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+
+
+
+{% block maininfo %}
+<form action="{{url_for('signup_process')}}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
+    <input type="submit" value="Submit">
+</form>
+{% endblock maininfo %}
