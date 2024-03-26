@@ -8,6 +8,11 @@ Login
 
 
 {% block maininfo %}
+{% if signup_data %}
+<script>
+    alert('{{signup_data}}')
+</script>
+{% endif %}
 <form action="{{url_for('signup_process')}}" method="post">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required>
